@@ -7,6 +7,7 @@
     --cor-branco: #ffff;
     --cor-cinza: #cdd0d3;
     --cor-cinza-claro: #cdd0d3b2;
+    --cor-preto:  #000000;
 }
 
 body{
@@ -17,6 +18,14 @@ body{
 .container{
     width: 80%;
     margin: 0 auto;
+}
+
+.container2{
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px;
+    display: flex; 
+    justify-content: center;
 }
 
 .notificacao{
@@ -83,14 +92,103 @@ body{
 .form{
     display: flex;
     flex-direction: column;
-    padding: 30px;
-    margin-top: 10em;
+    border: solid;
+    border-color: var(--cor-cinza-claro);
     align-items: center;
-    border-style: solid;
-    border-color: var(--cor-cinza);
+    width: 500px;
 
-    
+    div{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    input{
+        width: 300px;
+    }
+
+    button{
+        width: 100px;
+    }
 }
 
+.imgSize{
+    width: 90px;
+}
+
+.imgBigSize{
+    width: 150px;
+}
+
+nav{
+    padding: 0%;
+    margin-bottom: 50px;
+    color: var(--cor-branco);
+    background-color: var(--cor-preto);
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
 
+
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        letter-spacing: 2px;
+        font-size: 20px;
+    }
+
+    ul li:hover{
+        transform: scale(1.15);
+        color: var(--cor-cinza-claro);
+    }
+
+    ul a:hover{
+        transform: scale(1.15);
+        color: var(--cor-cinza-claro);
+    }
+
+    a{
+        color: var(--cor-branco);
+        text-decoration: none;
+    }
+}
+
+.filmes{
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    img{
+        width: 180px;
+        border-radius: 14px;
+    }
+
+    
+    button{
+    border-color: transparent;
+    background-color: transparent;
+}
+}
+
+.filmes .filme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 14px;
+    gap: 18px;
+    width: 200px;
+    background-color: var(--cor-fundo-card);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+.filmes .filme:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}

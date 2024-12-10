@@ -24,16 +24,15 @@ $filme = $filmeModel->buscarPorId($id);
         <h2>Detalhes do Filme</h2>
 
         <h3>Nome: <?php echo $filme->nome?></h3>
+        <img class="imgBigSize" src="<?php echo $filme->img ?>" alt="Banner filme">
         <p>Ano: <?php echo $filme->ano?></p>
         <p>Descrição: <?php echo $filme->descricao?></p>
 
-        <form action="listar.php">
-            <button>
-                <span class="material-symbols-outlined">
-                    keyboard_double_arrow_left
-                </span>
-            </button>
-        </form>
-    </section>
+        <button onclick="window.history.back()">    
+            <span class="material-symbols-outlined">
+                keyboard_double_arrow_left
+            </span>
+        </button>
+
 </body>
 </html>
